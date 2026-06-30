@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WelcomingWeb Tier Test</title>
-  <script 
-    src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js"
-    data-widget-id="ecfeffed-12c6-447b-8420-6847ccf8c005">
-  </script>
   <style>
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; background: #fff; color: #111; }
     h1 { color: #1a1a2e; }
@@ -48,4 +44,79 @@
     <p>This is a standard paragraph testing how the widget handles font size, spacing, and contrast adjustments. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <p>A second paragraph with a <a href="#">hyperlink</a> and <strong>bold text</strong> and <em>italic text</em>.</p>
     <blockquote>"The power of the Web is in its universality." — Tim Berners-Lee</blockquote>
-    <p><small>This is small text at
+    <p><small>This is small text at 12px.</small></p>
+    <h3>A Subheading</h3>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three with a <a href="#">nested link</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="image-section">
+    <h2>Images</h2>
+    <p>Image with descriptive alt text:</p>
+    <img src="https://picsum.photos/800/300?random=1" alt="A wide landscape photograph used for accessibility testing purposes">
+    <p>Image with empty alt text:</p>
+    <img src="https://picsum.photos/800/300?random=2" alt="">
+    <p>Image with no alt text:</p>
+    <img src="https://picsum.photos/800/300?random=3">
+    <h3>Image Gallery</h3>
+    <div class="gallery">
+      <img src="https://picsum.photos/300/200?random=4" alt="Gallery image one">
+      <img src="https://picsum.photos/300/200?random=5" alt="Gallery image two">
+      <img src="https://picsum.photos/300/200?random=6">
+    </div>
+  </div>
+
+  <div class="card" id="video-section">
+    <h2>Videos</h2>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/20SHvU2PKsM" title="Web accessibility introduction video" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="card" id="table-section">
+    <h2>Data Table</h2>
+    <table>
+      <thead><tr><th>Platform</th><th>Free Plan</th><th>Paid From</th><th>AI Features</th></tr></thead>
+      <tbody>
+        <tr><td>WelcomingWeb</td><td>Yes</td><td>£19/month</td><td>Pro plan</td></tr>
+        <tr><td>Corpowid</td><td>Yes</td><td>$39/month</td><td>Custom plan</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" id="form-section">
+    <h2>Form</h2>
+    <label for="name">Full Name</label><br>
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <label for="email">Email Address</label><br>
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+    <input type="text" placeholder="Field with no label"><br><br>
+    <label for="message">Message</label><br>
+    <textarea id="message" rows="4" cols="50" placeholder="Type your message here"></textarea><br><br>
+    <button class="btn-primary">Submit</button>
+    <button class="btn-secondary">Cancel</button>
+  </div>
+
+  <div class="card" id="accessibility-section">
+    <h2>Deliberate Accessibility Issues</h2>
+    <p>Low contrast text:</p>
+    <div class="low-contrast">This text has very low contrast.</div>
+    <p>A link with no descriptive text:</p>
+    <a href="#">Click here</a>
+    <p>A button with no label:</p>
+    <button style="background:#0066cc; color:white; padding:10px 20px; border:none; border-radius:5px;">???</button>
+  </div>
+
+  <script 
+    src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js"
+    data-widget-id="ecfeffed-12c6-447b-8420-6847ccf8c005"
+    data-theme="abyss"
+    data-language="az"
+    data-widget-display-type="FULL">
+  </script>
+
+</body>
+</html>
