@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookiebot + WelcomingWeb Consent Test</title>
 
-  <!-- Cookiebot must load first, before any consent-gated scripts -->
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="9d044b0d-d556-4582-9ab3-96df0c2d8d93" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="9d044b0d-d556-4582-9ab3-96df0c2d8d93" data-blockingmode="manual" type="text/javascript"></script>
 
   <style>
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; }
@@ -16,9 +15,8 @@
 
   <h1>Cookiebot + WelcomingWeb Consent Test</h1>
   <p>This page tests whether the WelcomingWeb widget correctly loads once Cookiebot grants functional consent.</p>
-  <p>You should see a cookie consent banner appear shortly. Accept it (or specifically accept "Functional" cookies) and check whether the WelcomingWeb widget then appears.</p>
+  <p>You should see a cookie consent banner appear shortly. Accept it (or specifically allow "Functional" cookies) and check whether the WelcomingWeb widget then appears.</p>
 
-  <!-- WelcomingWeb widget, gated behind Cookiebot's functional consent category -->
   <script
     type="text/plain"
     data-cookieconsent="functional"
