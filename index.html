@@ -3,12 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WelcomingWeb Tier Test</title>
+  <title>WelcomingWeb Medium-Traffic Tier Test</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; background: #fff; color: #111; }
     h1 { color: #1a1a2e; }
     h2 { color: #16213e; border-bottom: 2px solid #eee; padding-bottom: 8px; }
     .card { background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 8px; }
+
+    .filler {
+      background: #eef1f7;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 8px;
+      border-left: 4px solid #0066cc;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards, pulseBorder 3s ease-in-out 0.8s infinite;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseBorder {
+      0%, 100% { border-left-color: #0066cc; }
+      50% { border-left-color: #66a3ff; }
+    }
+
     img { max-width: 100%; border-radius: 8px; margin: 10px 0; }
     a { color: #0066cc; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
@@ -27,8 +48,14 @@
 </head>
 <body>
 
-  <h1>WelcomingWeb Tier Comparison Test (High-Traffic Domain)</h1>
-  <p>This page tests which WelcomingWeb features are unlocked when the registered domain (theguardian.com) falls into a high-traffic pricing tier.</p>
+  <h1>WelcomingWeb Medium-Traffic Tier Test</h1>
+
+  <!-- Filler Section -->
+  <div class="filler">
+    <p>This page is a controlled test environment used to evaluate the WelcomingWeb accessibility widget under a domain registration corresponding to a medium-traffic tier (50,001–500,000 monthly visits). The content below includes a range of text, media, and interactive elements designed to surface how the widget behaves across different content types. No real user data is collected on this page, and it is not intended for public use.</p>
+  </div>
+
+  <p>This page tests which WelcomingWeb features are unlocked when the registered domain falls into a medium-traffic pricing tier.</p>
 
   <nav aria-label="Page sections">
     <a href="#text-section">Text</a> |
@@ -110,13 +137,7 @@
     <button style="background:#0066cc; color:white; padding:10px 20px; border:none; border-radius:5px;">???</button>
   </div>
 
-<script
-  src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js"
-  data-widget-id="ecfeffed-12c6-447b-8420-6847ccf8c005"
-  data-theme="aqua"
-  data-language="ar"
-  data-widget-display-type="FULL">
-</script>
+  <script src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js" data-widget-id="ecfeffed-12c6-447b-8420-6847ccf8c005"></script>
 
 </body>
 </html>
