@@ -2,10 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Accessibility Statement Link Test</title>
+  <title>Consent Management Test</title>
+  <style>
+    #consent-banner {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: #1a1a2e; color: white; padding: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: Arial, sans-serif; z-index: 9999;
+    }
+    #consent-banner button {
+      background: #0066cc; color: white; border: none;
+      padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Testing: Accessibility Statement Link Toggle</h1>
-  <script src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js" data-widget-id="ecfeffed-12c6-447b-8420-6847ccf8c005" data-widget-display-type="FULL" data-show-accessibility-statement-link="true"></script>
+
+  <h1>Consent Management Test</h1>
+  <p>This page includes a basic cookie consent banner to properly test the widget's <code>data-requires-consent</code> behavior.</p>
+
+  <div id="consent-banner">
+    <span>This site uses functional cookies to enable accessibility features.</span>
+    <div>
+      <button onclick="grantConsent()">Accept</button>
+    </div>
+  </div>
+
+  <script>
+    function grantConsent() {
+      document.cookie = "functional_consent=true; path=/; max-age=31536000";
+      document.getElementById('consent-banner').style.display = 'none';
+      loadWidget();
+    }
+
+    function loadWidget() {
+      var s = document.createElement('script');
+      s.src = 'https://cdn-01.welcomingweb.com/a11y-widget.bundle.js';
+      s.setAttribute('data-widget-id', 'ecfeffed-12c6-447b-8420-6847ccf8c005');
+      s.setAttribute('data-requires-consent', 'functional');
+      document.body.appendChild(s);
+    }
+
+    // Check if consent was already given on a previous visit
+    if (document.cookie.includes('functional_consent=true')) {
+      document.getElementById('consent-banner').style.display = 'none';
+      loadWidget();
+    }
+  </script>
+
 </body>
 </html>
