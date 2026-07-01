@@ -52,7 +52,7 @@
 
   <!-- Filler Section -->
   <div class="filler">
-    <p>This page is a controlled test environment used to evaluate the WelcomingWeb accessibility widget under a domain registration corresponding to a medium-traffic tier (50,001–500,000 monthly visits). The content below includes a range of text, media, and interactive elements designed to surface how the widget behaves across different content types. No real user data is collected on this page, and it is not intended for public use.</p>
+    <p>This page is a controlled test environment used to evaluate the WelcomingWeb accessibility widget under a domain registration corresponding to a medium-traffic tier (50,001–500,000 monthly visits). This version tests the report-issue button, keyboard shortcuts, live site translation, browser-language auto-detection, and functional consent gating. No real user data is collected on this page, and it is not intended for public use.</p>
   </div>
 
   <p>This page tests which WelcomingWeb features are unlocked when the registered domain falls into a medium-traffic pricing tier.</p>
@@ -137,7 +137,16 @@
     <button style="background:#0066cc; color:white; padding:10px 20px; border:none; border-radius:5px;">???</button>
   </div>
 
-  <script src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js" data-widget-id="ecfeffed-12c6-447b-8420-6847ccf8c005"></script>
+  <script
+    src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js"
+    data-widget-id="ecfeffed-12c6-447b-8420-6847ccf8c005"
+    data-widget-display-type="FULL"
+    data-enable-report-issue="true"
+    data-enable-keyboard-shortcuts="true"
+    data-enable-live-site-translation="true"
+    data-use-accept-language="true"
+    data-requires-consent="functional">
+  </script>
 
 </body>
 </html>
